@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { toggleFavorite } from "../moviesSlice";
 import toast from "react-hot-toast";
+import alterateImage from "../assets/alternateimage.jpg";
 
 const MovieCard = ({ movie }) => {
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ const MovieCard = ({ movie }) => {
   return (
     <div className="p-4 border rounded-lg shadow-lg hover:bg-gray-100">
       <img
-        src={movie.image}
+        src={alterateImage}
         alt={movie.movie}
         className="w-full h-64 object-cover rounded-t-lg"
         onClick={() => window.open(movie.imdb_url, "_blank")}
