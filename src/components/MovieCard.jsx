@@ -18,16 +18,16 @@ const MovieCard = ({ movie }) => {
   };
 
   return (
-    <div className="p-4 border rounded-lg shadow-lg hover:bg-gray-100">
+    <div className="p-4 border rounded-lg shadow-lg  hover:scale-105 duration-300">
       <img
         src={alterateImage}
         alt={movie.movie}
-        className="w-full h-64 object-cover rounded-t-lg"
+        className="w-full h-64 object-cover rounded-t-lg cursor-pointer"
         onClick={() => window.open(movie.imdb_url, "_blank")}
       />
-      <div className="p-4">
-        <h2 className="text-xl font-bold">{movie.movie}</h2>
-        <p className="text-gray-800">Rating : {movie.rating}</p>
+      <div className="p-4 flex justify-center items-center flex-col">
+        <h2 className="text-xl font-bold text-center ">{movie.movie}</h2>
+        <p className="text-gray-800  ">Rating : {movie.rating}</p>
         <button
           className="mt-2 p-2 bg-blue-500 text-white rounded-md hover:bg-blue-700"
           onClick={handleFavoriteClick}
