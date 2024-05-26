@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { toggleFavorite } from "../moviesSlice";
+import toast from "react-hot-toast";
 
 const MovieCard = ({ movie }) => {
   const dispatch = useDispatch();
@@ -8,6 +9,11 @@ const MovieCard = ({ movie }) => {
   const handleFavoriteClick = (e) => {
     e.stopPropagation();
     dispatch(toggleFavorite(movie.id));
+    toast.success(
+      movie.isFavorite
+        ? "Movie removed from favorites"
+        : "Movie added to favorites"
+    );
   };
 
   return (
