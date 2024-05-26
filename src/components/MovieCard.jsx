@@ -18,18 +18,18 @@ const MovieCard = ({ movie }) => {
   };
 
   return (
-    <div className="p-4 border rounded-lg shadow-lg  hover:scale-105 duration-300">
+    <div className="p-4  border-2 rounded-lg shadow-lg  hover:scale-105 z-20 duration-300">
       <img
         src={alterateImage}
         alt={movie.movie}
-        className="w-full h-64 object-cover rounded-t-lg cursor-pointer"
+        className="w-full h-64 object-cover rounded-t-lg cursor-pointer mt-3 "
         onClick={() => window.open(movie.imdb_url, "_blank")}
       />
       <div className="p-4 flex justify-center items-center flex-col">
         <h2 className="text-xl font-bold text-center ">{movie.movie}</h2>
-        <p className="text-gray-800  ">Rating : {movie.rating}</p>
+        <p className="text-gray-800 font-medium ">Rating : {movie.rating}</p>
         <button
-          className="mt-2 p-2 bg-blue-500 text-white rounded-md hover:bg-blue-700"
+          className="btn mt-2 font-medium px-8 py-2 w-32 flex justify-center items-center  border-2 border-teal-300 rounded-md "
           onClick={handleFavoriteClick}
         >
           {movie.isFavorite ? "Unfavorite" : "Favorite"}

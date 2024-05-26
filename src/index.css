@@ -10,3 +10,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navlink {
+  position: relative;
+  transition: 0.2s;
+}
+
+.navlink:hover {
+  color: #78909c;
+}
+.navlink::after {
+  content: "";
+  position: absolute;
+  background-color: #78909c;
+  height: 3.5px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: 0.2s;
+}
+
+.navlink:hover::after {
+  width: 100%;
+}
