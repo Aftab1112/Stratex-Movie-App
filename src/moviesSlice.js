@@ -9,7 +9,7 @@ const initialState = {
 };
 
 export const fetchMovies = createAsyncThunk("movies/fetchMovies", async () => {
-  const response = await axios.get(process.env.MOVIES_API_URL);
+  const response = await axios.get("https://dummyapi.online/api/movies");
   return response.data;
 });
 

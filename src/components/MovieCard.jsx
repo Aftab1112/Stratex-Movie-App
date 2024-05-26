@@ -6,7 +6,7 @@ const MovieCard = ({ movie }) => {
   const dispatch = useDispatch();
 
   const handleFavoriteClick = (e) => {
-    e.stopPropogation();
+    e.stopPropagation();
     dispatch(toggleFavorite(movie.id));
   };
 
