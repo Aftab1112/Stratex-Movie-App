@@ -27,9 +27,9 @@ const MovieCard = ({ movie }) => {
       />
       <div className="p-4 flex justify-center items-center flex-col">
         <h2 className="text-xl font-bold text-center ">{movie.movie}</h2>
-        <p className="text-gray-800 font-medium ">Rating : {movie.rating}</p>
+        <p className="text-gray-800 font-semibold ">Rating : {movie.rating}</p>
         <button
-          className="btn mt-2 font-medium px-8 py-2 w-32 flex justify-center items-center  border-2 border-teal-300 rounded-md "
+          className="btn flex justify-center items-center "
           onClick={handleFavoriteClick}
         >
           {movie.isFavorite ? "Unfavorite" : "Favorite"}
